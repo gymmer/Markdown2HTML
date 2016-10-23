@@ -1,0 +1,190 @@
+<h1>0. 目录</h1>
+<p>[TOC]</p>
+<hr />
+<h1>1. 文字效果</h1>
+<h2>标题</h2>
+<p>行首用<code>#</code>表示标题。<code>#</code>数量表示标题级别，表示H1-H6。注意，<code>#</code>后有空格。<br />
+比如：上面这段标题，写起来就是这样：</p>
+<pre><code># 1. 文字效果
+## 标题
+</code></pre>
+<h2>换行</h2>
+<p>在一行文字最后，输入两个空格，实现换行。<br />
+注意，句号后有两个空格！</p>
+<h2>强调</h2>
+<p>用不同数量的<code>*</code> 或者<code>_</code>包围你的文字，表示强调。注意符号和文字之间不要有空格。比如：</p>
+<pre><code>*斜体*  或者  _斜体_  
+**粗体** 或者 __粗体__  
+***斜体+粗体***  或者 ___粗体+斜体___
+</code></pre>
+<p>看起来是这样的：</p>
+<p><em>斜体</em>  或者  <em>斜体</em><br />
+<strong>粗体</strong> 或者 <strong>粗体</strong><br />
+<strong><em>斜体+粗体</em></strong>  或者 <strong><em>粗体+斜体</em></strong>  </p>
+<h2>代码</h2>
+<h3>行内代码</h3>
+<p>用反引号包围文字。比如 ：</p>
+<pre><code>`This is your code`
+</code></pre>
+<p>看起来是：<code>This is your code</code></p>
+<h3>块内代码</h3>
+<p>代码块前空出一行。代码块的每一行，都要有缩进，如：用制表符缩进，或4个及以上的空格缩进。比如：</p>
+<pre><code>for (var i=0; i&lt;document.body.childNodes.length; i++)
+{
+    console.log("hello world");
+}
+</code></pre>
+<h3>代码高亮</h3>
+<p>用三个反引号+语言，就可以实现语法高亮.比如这段：</p>
+<pre><code>```javascript
+    for (var i=0; i&lt;document.body.childNodes.length; i++)
+    {
+       console.log("hello world");
+    }
+```
+</code></pre>
+<p>看起来是这样的：</p>
+<p><code>javascript
+   for (var i=0; i&lt;document.body.childNodes.length; i++)
+   {
+        console.log("hello world");
+   }</code></p>
+<h2>引用</h2>
+<p>行首用<code>&gt;</code>表示引用。<code>&gt;</code>数量表示引用级别，可以嵌套。比如：</p>
+<pre><code>&gt;我是一级引用  
+&gt;好巧啊，我也是一级引用   
+&gt;&gt;为什么我是二级引用  
+&gt;&gt;而你们都是一级引用
+</code></pre>
+<p>看起来是这样的：</p>
+<blockquote>
+<p>我是一级引用<br />
+好巧啊，我也是一级引用   </p>
+<blockquote>
+<p>为什么我是二级引用<br />
+而你们都是一级引用  </p>
+</blockquote>
+</blockquote>
+<hr />
+<h1>2. 逻辑关系</h1>
+<h2>列表</h2>
+<h3>有序列表</h3>
+<p>行首用数字表示有序列表。注意，数字后有空格。比如：  </p>
+<pre><code>1. 把冰箱门开开  
+2. 把大象装进去  
+3. 把冰箱门关上
+</code></pre>
+<p>看起来也没什么变化：</p>
+<ol>
+<li>把冰箱门开开  </li>
+<li>把大象装进去  </li>
+<li>把冰箱门关上  </li>
+</ol>
+<h3>无序列表</h3>
+<p>行首使用 <code>*</code>或<code>-</code>表示无序列表。注意，符号后有空格，列表与下文间有一行空格。比如：</p>
+<pre><code>* 锄禾日当午
+* 汗滴禾下土
+* 谁知盘中餐
+* 粒粒皆辛苦
+</code></pre>
+<p>看起来是：</p>
+<ul>
+<li>锄禾日当午</li>
+<li>汗滴禾下土</li>
+<li>谁知盘中餐</li>
+<li>粒粒皆辛苦</li>
+</ul>
+<p>这是另一种：</p>
+<pre><code>&gt;- 床前明月光
+&gt;- 疑是地上霜
+&gt;- 举头望明月
+&gt;- 低头思故乡
+</code></pre>
+<p>看上去是：</p>
+<blockquote>
+<ul>
+<li>床前明月光</li>
+<li>疑是地上霜</li>
+<li>举头望明月</li>
+<li>低头思故乡</li>
+</ul>
+</blockquote>
+<h3>待办事宜</h3>
+<p>没做的为<code>[空格]</code>，已做的为小写<code>[x]</code>。比如：</p>
+<pre><code>-[ ] 作业没写  
+-[ ] 衣服没洗  
+-[x] 饭吃了  
+-[x] 游戏通关了
+</code></pre>
+<p>看起来是：</p>
+<p>-[ ] 作业没写<br />
+-[ ] 衣服没洗<br />
+-[x] 饭吃了<br />
+-[x] 游戏通关了  </p>
+<p>并不是所有编辑器，都能很好支持待办事宜。</p>
+<h2>表格</h2>
+<p>给个示例，一看就会啦：</p>
+<pre><code>|姓名     |学号     |性别  
+|:---:    |:---    |--:  
+|张三     |1101     |男  
+|狗剩     |1102     |男  
+|娟儿     |1103     |女
+</code></pre>
+<p>看上去是：</p>
+<p>|姓名     |学号     |性别<br />
+|:---:    |:---     |--:<br />
+|张三     |1101     |男<br />
+|狗剩     |1102     |男<br />
+|娟儿     |1103     |女  </p>
+<p>发现了吗，<code>:---:</code>是居中，<code>:--</code>是左对齐，<code>--:</code>是右对齐</p>
+<h2>分割线</h2>
+<p>单独一行里输入三个<code>*</code> 或 <code>-</code> 或<code>_</code>，可产生水平分割线。比如：</p>
+<pre><code>***
+---
+___
+</code></pre>
+<p>会得到三条水平分割线：</p>
+<h2>***</h2>
+<hr />
+<p>如果你看到了一个 <code>*</code> ，是因为有的编辑器，将前面的<code>**</code> 当成了粗体标志。</p>
+<h1>3. 外部链接</h1>
+<h2>图片</h2>
+<p>这是图片的语法：<code>![代替文字](图片URL)</code>
+这里演示一个有效的图片：<br />
+<code>![北京师范大学](http://www.bnu.edu.cn/3/imgs/BNU-logo.png)</code>
+图片出来了： </p>
+<p><img alt="北京师范大学" src="http://www.bnu.edu.cn/3/imgs/BNU-logo.png" /></p>
+<h2>超链接</h2>
+<p>这是超链接的语法：<code>[链接文字](链接URL)</code>
+这里是一个有效的链接：<code>[北京师范大学](http://www.bnu.edu.cn)</code>,<br />
+看上去就是:<a href="http://www.bnu.edu.cn">北京师范大学</a></p>
+<hr />
+<h1>4.其他</h1>
+<h2>目录</h2>
+<p>加入<code>[TOC]</code>即可显示目录。注意，前后都有空行。
+比如，本文档开头，就是目录的示例:</p>
+<pre><code># 0. 目录
+
+[TOC]
+
+# 1. 文字效果
+</code></pre>
+<p>有的编辑器，并不支持目录。</p>
+<h2>注脚</h2>
+<p>使用<code>[^注脚名称]</code>表示注脚。比如：  </p>
+<pre><code>今天是个好日子，心想的事儿都能成[^somename]。
+</code></pre>
+<p>有了注脚后是：
+今天是个好日子，心想的事儿都能成<a href="我自己说的。">^somename</a>。  </p>
+<p>接下来去文档最后，写注脚的说明。  </p>
+<pre><code>[^somename]: 我自己说的。
+</code></pre>
+<h2>定义</h2>
+<p>用<code>:</code>+4个空格，实现定义。不过有的编辑器不支持定义。比如：</p>
+<pre><code>Javascript  
+:    这是一种语言。
+</code></pre>
+<p>看起来是：</p>
+<p>Javascript<br />
+:    这是一种语言。</p>
+<hr />
